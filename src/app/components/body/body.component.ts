@@ -6,5 +6,10 @@ import {Component} from '@angular/core';
   templateUrl:'./body.component.html'
 })
 export class bodyComponent {
-
+  mostrar=true;
+  frase:any={
+    mensaje:'Un gran poder conlleva una gran responsabilidad',
+    autor:'Ben Parker'
+  }
+  personajes:string[]=['Spiderman','Dr Strange','Capitana Marvel'];
 }

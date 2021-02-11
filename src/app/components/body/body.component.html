@@ -4,23 +4,21 @@
             <h1 class="card-header">*ngIf</h1>
 
             <div class="card-body">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button class="btn btn-outline-dark">Mostrar/Ocultar</button>
+                <div *ngIf="mostrar" class="m-2">
+                    <h5 class="card-title">{{frase.autor}}</h5>
+                    <p class="card-text">{{frase.mensaje}}</p>
+                </div>
+                <button (click)="mostrar=!mostrar" class=" btn btn-outline-dark ">Mostrar/Ocultar</button>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-            <h1 class="card-header">*ngFor</h1>
+    <div class="col ">
+        <div class="card text-white bg-info mb-3 " style="max-width: 18rem; ">
+            <h1 class="card-header ">*ngFor</h1>
 
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+            <div class="card-body ">
+                <ul class="list-group ">
+                    <li *ngFor="let personaje of personajes; let i =index" class="list-group-item text-dark">{{i+1}} - {{personaje}}</li>
                 </ul>
             </div>
         </div>
